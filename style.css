@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+    --primary: #ff6257;
+    --Dark-Slate-Grey: #242742;
+    --Charcoal-Grey: #36384e;
+    --Grey: #9294a0;
+    --White: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Charcoal-Grey);
+}
+
+.container {
+    width: 700px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.container .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 14px;
+    padding: 20px;
+}
+
+.container .main .header {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+}
+
+.container .main p {
+    color: var(--Charcoal-Grey);
+}
+
+.container .main li {
+    list-style: none;
+    color: var(--Charcoal-Grey);
+}
+
+.container .main li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.container .main li i {
+    color: var(--primary);
+    margin-right: 10px;
+}
+
+.container .email-cont {
+    position: relative;
+}
+
+.container .email-cont #email {
+    width: 100%;
+    padding: 15px 5px;
+    margin-top: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--Grey);
+    color: var(--Dark-Slate-Grey);
+}
+
+.container .email-cont #email:focus {
+    outline: none;
+    border: 1px solid var(--Dark-Slate-Grey);
+}
+
+.container .email-cont::before {
+    content: 'Email address';
+    position: absolute;
+    top: 10px;
+    width: fit-content;
+    color: var(--Dark-Slate-Grey);
+}
+
+.container .email-cont span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    color: var(--primary);
+    font-size: 12px;
+    display: none;
+}
+
+.container .submit-btn {
+    background-color: var(--Dark-Slate-Grey);
+    text-align: center;
+    padding: 20px;
+    color: var(--White);
+    font-weight: 700;
+    font-weight: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.container .submit-btn:hover {
+    background-image: linear-gradient(to top right, #ff1e87, var(--primary), var(--primary));
+}
+
+.image {
+    flex: 1;
+    height: 400px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.thanks-msg {
+    width: 350px;
+    padding: 40px;
+    background-color: var(--White);
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+
+.thanks-msg i {
+    color: var(--primary);
+    font-size: 40px;
+}
+
+.thanks-msg .header {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--Dark-Slate-Grey);
+}
+
+.thanks-msg p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.thanks-msg .dismiss-btn {
+    text-align: center;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.thanks-msg .dismiss-btn:hover {
+    background-image: linear-gradient(to top right, #ff1e87, var(--primary), var(--primary));
+}
+
+.thanks-msg p span{
+    font-weight: 700;
+}
+
+@media (max-width:767px) {
+    .container {
+        width: 90%;
+    }
+
+    .container .image {
+        display: none;
+    }
+}
